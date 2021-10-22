@@ -19,6 +19,7 @@ app.get('/api/notes', (req, res) =>
 res.json(notes)); 
 
 app.post('/api/notes', ((req, res)=>{
+req.body.id = uniqid();
 notes.push(req.body); 
 }));
 
